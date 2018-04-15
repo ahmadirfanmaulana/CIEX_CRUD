@@ -18,21 +18,21 @@
         <!-- Name -->
         <div class="form-group">
           <label for="">Name</label>
-          <input type="text" class="form-control" id="" placeholder="" name="name">
+          <input type="text" class="form-control" id="" placeholder="" name="name" required>
           <p class="help-block"></p>
         </div>
 
         <!-- Reason -->
         <div class="form-group">
           <label for="">Reason</label>
-          <textarea name="reason" rows="8" cols="80" class="form-control"></textarea>
+          <textarea name="reason" rows="8" cols="80" class="form-control" required></textarea>
           <p class="help-block"></p>
         </div>
 
         <!-- Foto -->
         <div class="form-group">
           <label for="">Your Photo</label>
-          <input type="file" class="form-control" id="" placeholder="" name="foto">
+          <input type="file" class="form-control" id="" placeholder="" name="foto" required>
           <p class="help-block"> <i>* Your photo must be JPG or PNG</i> </p>
         </div>
 

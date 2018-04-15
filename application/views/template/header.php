@@ -25,7 +25,7 @@
       </li>
     </ul>
     <?php echo form_open('singles/result', ['method'=>'post', 'class'=>"form-inline my-2 my-lg-0"]); ?>
-      <input class="form-control mr-sm-2" type="text" placeholder="Search Single" name="keyword" value="<?php echo $this->input->post('keyword'); ?>">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search Single" name="keyword" value="<?php echo $this->input->post('keyword'); ?>" required>
       <button class="btn btn-secondary my-2 my-sm-0" type="submit" value="submit" name="submit">Search</button>
     <?php echo form_close(); ?>
   </div>

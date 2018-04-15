@@ -21,14 +21,14 @@
         <!-- Name -->
         <div class="form-group">
           <label for="">Name</label>
-          <input type="text" class="form-control" id="" placeholder="" name="name" value="<?php echo $single->name; ?>">
+          <input type="text" class="form-control" id="" placeholder="" name="name" value="<?php echo $single->name; ?>" required>
           <p class="help-block"></p>
         </div>
 
         <!-- Reason -->
         <div class="form-group">
           <label for="">Reason</label>
-          <textarea name="reason" rows="8" cols="80" class="form-control"><?php echo $single->reason; ?></textarea>
+          <textarea name="reason" rows="8" cols="80" class="form-control" required><?php echo $single->reason; ?></textarea>
           <p class="help-block"></p>
         </div>
 
