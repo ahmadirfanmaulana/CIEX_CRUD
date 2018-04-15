@@ -23,23 +23,34 @@
         </thead>
         <tbody>
           <?php
-          $no = 1;
-          foreach ($singles->result() as $single) {
+          if ($singles->num_rows() > 1) {
+            $no = 1;
+            foreach ($singles->result() as $single) {
+              ?>
+              <tr>
+                <td class="text-center"><?php echo $no; ?></td>
+                <td class="text-center">
+                  <img src="<?php echo base_url('upload/img/' . $single->foto); ?>" alt="" style="width:50px;">
+                </td>
+                <td><?php echo $single->name; ?></td>
+                <td><?php echo $single->reason; ?></td>
+                <td class="text-center">
+                  <?php echo anchor('singles/edit/' . $single->id, 'Edit', ['class'=>'btn btn-info btn-sm']); ?>
+                  <?php echo anchor('singles/delete/' . $single->id, 'Delete', ['class'=>'btn btn-danger btn-sm']); ?>
+                </td>
+              </tr>
+              <?php
+              $no++;
+            }
+          }
+          else {
             ?>
             <tr>
-              <td class="text-center"><?php echo $no; ?></td>
-              <td class="text-center">
-                <img src="<?php echo base_url('upload/img/' . $single->foto); ?>" alt="" style="width:50px;">
-              </td>
-              <td><?php echo $single->name; ?></td>
-              <td><?php echo $single->reason; ?></td>
-              <td class="text-center">
-                <?php echo anchor('singles/edit/' . $single->id, 'Edit', ['class'=>'btn btn-info btn-sm']); ?>
-                <?php echo anchor('singles/delete/' . $single->id, 'Delete', ['class'=>'btn btn-danger btn-sm']); ?>
+              <td class="text-center" colspan="5">
+                Empty Data Singles
               </td>
             </tr>
             <?php
-            $no++;
           }
            ?>
         </tbody>
