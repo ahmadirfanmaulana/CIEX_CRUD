@@ -23,7 +23,7 @@
         </thead>
         <tbody>
           <?php
-          if ($singles->num_rows() > 1) {
+          if ($singles->num_rows() > 0) {
             $no = 1;
             foreach ($singles->result() as $single) {
               ?>

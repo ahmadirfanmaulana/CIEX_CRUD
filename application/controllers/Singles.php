@@ -94,7 +94,7 @@ class Singles extends CI_Controller
 
     $this->db->like('name', $keyword);
     $this->db->or_like('reason', $keyword);
-    
+
     $data['singles'] = $this->db->get('single');
 
     // load view
